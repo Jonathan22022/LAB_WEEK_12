@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+dimen layout_margin
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id movie_list
+id movie_poster
+id movie_title
+id overview_text
+id release_text
+id title_text
+layout activity_details
+layout activity_main
+layout view_movie_item
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string movie_overview
+string movie_poster
+style Base.Theme.TEST_LAB_WEEK_12
+style Theme.TEST_LAB_WEEK_12
+xml backup_rules
+xml data_extraction_rules
