@@ -20,9 +20,10 @@ class MovieRepository(private val movieService: MovieService) {
 // for more info, see: https://kotlinlang.org/docs/flow.html#flows
     fun fetchMovies(): Flow<List<Movie>> {
         return flow {
+            val movies = movieService.getPopularMovies(apiKey).results
 // emit the list of popular movies from the API
-            emit(movieService.getPopularMovies(apiKey).results)
-// use Dispatchers.IO to run this coroutine on a shared pool of threads
+            emit(movies.sortedByDescending { it.popularity })
+        // use Dispatchers.IO to run this coroutine on a shared pool of threads
         }.flowOn(Dispatchers.IO)
     }
 }
